@@ -45,16 +45,15 @@ class Home extends React.Component{
                 </Jumbotron>
                 <Carousel style={{width:"98vw",marginLeft:"auto",marginRight:"auto"}}>
                 {
-                    projects.map((item)=>{
-                        return(<Carousel.Item>
-                        
+                    projects.map((item,index)=>{
+                        return(
+                        <Carousel.Item key={index}>
                             <div className="d-block w-100 align-middle" style={styles.carouselitem}><label style={styles.carouseltext}>{item.name}</label></div>
-  
-                        <Carousel.Caption>
-                            <h3>{item.subtitle}</h3>
-                            <p>{item.summary}</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>{item.subtitle}</h3>
+                                <p>{item.summary}</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
                     )})
                 }
                 </Carousel>
