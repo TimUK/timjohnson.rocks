@@ -3,6 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import CarouselImage1 from './images/macbook_and_iphone.png';
+import CarouselImage2 from './images/macbook_and_iphone_percent.png';
 import ReactLogo from '../logo.svg';
 
 
@@ -23,7 +24,7 @@ const styles = {
 
 var projects=[
         {subtitle:"This website",summary:"React website just to display a little about myself",image:CarouselImage1},
-        {subtitle:"Project number two",summary:"This project is the second item in the carousel",image:ReactLogo}
+        {subtitle:"Percentage tools",summary:"Simple tool for getting percentage changes of an amount",image:CarouselImage2}
     ];
 
 class Home extends React.Component{
