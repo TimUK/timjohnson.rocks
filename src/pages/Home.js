@@ -2,6 +2,8 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
+import CarouselImage1 from './images/macbook_and_iphone.png';
+import ReactLogo from '../logo.svg';
 
 
 const styles = {
@@ -9,21 +11,19 @@ const styles = {
         fontWeight:"bold",
         fontSize:"250%",
         textAlign:"center",
-        width:"800px",
-        height:"400px",
+        minHeight:"400px",
         color:"#fff",
-        backgroundColor:"#20232a"
+        backgroundColor:"#20232a",
+        
     },
     carouseltext:{
-        position: "absolute",
-        top: "20%",
-        transform: "translateX(-50%)"
+        color:"#FFF"
     }
 }
 
 var projects=[
-        {name:"Project Name",subtitle:"Project subtitle",summary:"Project description in this section"},
-        {name:"Another Project Name",subtitle:"Project number two",summary:"This project is the second item in the carousel"}
+        {subtitle:"This website",summary:"React website just to display a little about myself",image:CarouselImage1},
+        {subtitle:"Project number two",summary:"This project is the second item in the carousel",image:ReactLogo}
     ];
 
 class Home extends React.Component{
@@ -48,8 +48,12 @@ class Home extends React.Component{
                     projects.map((item,index)=>{
                         return(
                         <Carousel.Item key={index}>
-                            <div className="d-block w-100 align-middle" style={styles.carouselitem}><label style={styles.carouseltext}>{item.name}</label></div>
-                            <Carousel.Caption>
+                            {//<div className="d-block w-100 align-middle" style={styles.carouselitem}><label style={styles.carouseltext}>{item.name}</label></div>
+                            }
+                            <div className="d-block w-100" style={styles.carouselitem}>
+                            <img src={item.image} style={{maxHeight:"280px"}}/>
+                            </div>
+                            <Carousel.Caption style={styles.carouseltext}>
                                 <h3>{item.subtitle}</h3>
                                 <p>{item.summary}</p>
                             </Carousel.Caption>
