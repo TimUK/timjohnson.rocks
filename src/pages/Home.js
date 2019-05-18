@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import CarouselImage1 from './images/macbook_and_iphone.png';
 import CarouselImage2 from './images/macbook_and_iphone_percent.png';
-import ReactLogo from '../logo.svg';
+
 
 
 const styles = {
@@ -52,7 +52,7 @@ class Home extends React.Component{
                             {//<div className="d-block w-100 align-middle" style={styles.carouselitem}><label style={styles.carouseltext}>{item.name}</label></div>
                             }
                             <div className="d-block w-100" style={styles.carouselitem}>
-                            <img src={item.image} style={{maxHeight:"280px",maxWidth:"100vw"}}/>
+                            <img src={item.image} alt="Project screenshot" style={{maxHeight:"280px",maxWidth:"100vw"}}/>
                             </div>
                             <Carousel.Caption style={styles.carouseltext}>
                                 <h3>{item.subtitle}</h3>
