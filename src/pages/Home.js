@@ -52,7 +52,7 @@ class Home extends React.Component{
                             {//<div className="d-block w-100 align-middle" style={styles.carouselitem}><label style={styles.carouseltext}>{item.name}</label></div>
                             }
                             <div className="d-block w-100" style={styles.carouselitem}>
-                            <img src={item.image} style={{maxHeight:"280px"}}/>
+                            <img src={item.image} style={{maxHeight:"280px",maxWidth:"100vw"}}/>
                             </div>
                             <Carousel.Caption style={styles.carouseltext}>
                                 <h3>{item.subtitle}</h3>
