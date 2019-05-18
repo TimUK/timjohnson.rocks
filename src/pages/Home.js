@@ -12,13 +12,14 @@ const styles = {
         fontWeight:"bold",
         fontSize:"250%",
         textAlign:"center",
-        minHeight:"400px",
+        minHeight:"43vh",
         color:"#fff",
         backgroundColor:"#20232a",
         
     },
     carouseltext:{
-        color:"#FFF"
+        color:"#FFF",
+        textShadow: "2px 0px 0px #000, -2px 0px 0px #000,0px 2px 0px #000, 0px -2px 0px #000"
     }
 }
 
@@ -35,7 +36,7 @@ class Home extends React.Component{
         return (
             <>
                 
-                <Jumbotron style={{marginTop:"4vh",width:"98vw",marginLeft:"auto",marginRight:"auto"}}>
+                <Jumbotron style={{marginTop:"3vh",height:"38vh",width:"98vw",marginLeft:"auto",marginRight:"auto"}}>
                     <h1>Hello!</h1>
                     <p>
                         I am a software developer based in West Sussex, UK with a keen interest in web and mobile applications development.
@@ -52,7 +53,7 @@ class Home extends React.Component{
                             {//<div className="d-block w-100 align-middle" style={styles.carouselitem}><label style={styles.carouseltext}>{item.name}</label></div>
                             }
                             <div className="d-block w-100" style={styles.carouselitem}>
-                            <img src={item.image} alt="Project screenshot" style={{maxHeight:"280px",maxWidth:"100vw"}}/>
+                            <img src={item.image} alt="Project screenshot" style={{maxHeight:"27vh",maxWidth:"100vw"}}/>
                             </div>
                             <Carousel.Caption style={styles.carouseltext}>
                                 <h3>{item.subtitle}</h3>
