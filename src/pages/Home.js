@@ -34,8 +34,8 @@ class Home extends React.Component{
     render() {
         return (
             <>
-                <h1 style={{marginTop:"2vh",marginBottom:"2vh",marginLeft:"1vw"}}>Home</h1>
-                <Jumbotron style={{width:"98vw",marginLeft:"auto",marginRight:"auto"}}>
+                
+                <Jumbotron style={{marginTop:"4vh",width:"98vw",marginLeft:"auto",marginRight:"auto"}}>
                     <h1>Hello!</h1>
                     <p>
                         I am a software developer based in West Sussex, UK with a keen interest in web and mobile applications development.
