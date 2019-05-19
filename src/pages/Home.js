@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import CarouselImage1 from './images/macbook_and_iphone.png';
 import CarouselImage2 from './images/macbook_and_iphone_percent.png';
+import jumbotronbackground from './images/jumbotronbackground.jpg';
 
 
 
@@ -20,7 +21,20 @@ const styles = {
     carouseltext:{
         color:"#FFF",
         textShadow: "2px 0px 0px #000, -2px 0px 0px #000,0px 2px 0px #000, 0px -2px 0px #000"
-    }
+	},
+	jumbotron:{
+		backgroundColor:"#000",
+		color:"#fff",
+		backgroundRepeat:"no-repeat",
+		backgroundPosition:"center",
+		backgroundSize:"70%",
+		backgroundImage:"url("+jumbotronbackground+")",
+		marginTop:"3vh",
+		height:"38vh",
+		width:"98vw",
+		marginLeft:"auto",
+		marginRight:"auto"
+	}
 }
 
 var projects=[
@@ -36,7 +50,7 @@ class Home extends React.Component{
         return (
             <>
                 
-                <Jumbotron style={{marginTop:"3vh",height:"38vh",width:"98vw",marginLeft:"auto",marginRight:"auto"}}>
+                <Jumbotron style={styles.jumbotron}>
                     <h1>Hello!</h1>
                     <p>
                         I am a software developer based in West Sussex, UK with a keen interest in web and mobile applications development.
