@@ -87,7 +87,7 @@ class Home extends React.Component{
                 <Jumbotron fluid style={styles.jumbotron}>
                     <h1>Hello!</h1>
                     <p>
-                        I am a software developer based in Bognor Regis, West Sussex, UK with a keen interest in web and mobile applications development.
+                        I am a software developer based in Bognor Regis, West Sussex, UK with a keen interest in website and mobile applications development.
                     </p>
                     <p>
                         <Button variant="primary" href="https://github.com/TimUK" target="_blank">See my projects</Button>
