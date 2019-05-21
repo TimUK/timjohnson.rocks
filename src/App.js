@@ -4,6 +4,9 @@ import {BrowserRouter as Router,Route} from 'react-router-dom';
 import {Navbar, Nav} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
 import Home from './pages/Home.js';
 
 class App extends React.Component{
