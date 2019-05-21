@@ -22,7 +22,7 @@ const styles = {
         fontWeight:"bold",
         fontSize:"250%",
         textAlign:"center",
-        minHeight:"350px",
+        minHeight:"410px",
         color:"#fff",
 		//backgroundColor:"#20232a",
 		backgroundColor:"#007bff"
@@ -45,7 +45,10 @@ const styles = {
 		//width:"98vw",
 		marginLeft:"auto",
 		marginRight:"auto",
-		marginBottom:"0"
+		marginBottom:"0",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
 	},
 	aboutjumbotron:{
 		backgroundColor:"#fff",
@@ -56,7 +59,10 @@ const styles = {
 		//width:"98vw",
 		marginLeft:"auto",
 		marginRight:"auto",
-		marginBottom:"0"
+		marginBottom:"0",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
 	},
 	thirdjumbotron:{
 		backgroundColor:"#007bff",
@@ -67,7 +73,10 @@ const styles = {
 		//width:"98vw",
 		marginLeft:"auto",
 		marginRight:"auto",
-		marginBottom:"0"
+		marginBottom:"0",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
 	}
 }
 
@@ -85,13 +94,21 @@ class Home extends React.Component{
             <>
                 
                 <Jumbotron fluid style={styles.jumbotron}>
-                    <h1>Hello!</h1>
+                    <Container>
+                        <Row>
+                            <Col xs={12}>
+                    <h1 style={{marginBottom:"4vh"}}>Hello!</h1>
                     <p>
                         I am a software developer based in Bognor Regis, West Sussex, UK with a keen interest in website and mobile applications development.
                     </p>
-                    <p>
+                    <p style={{marginTop:"4vh"}}>
                         <Button variant="primary" href="https://github.com/TimUK" target="_blank">See my projects</Button>
                     </p>
+                    
+								
+							</Col>
+						</Row>
+					</Container>
                 </Jumbotron>
                 <Carousel style={{marginLeft:"auto",marginRight:"auto"}}>
                 {
@@ -131,7 +148,7 @@ class Home extends React.Component{
 				<Jumbotron fluid style={styles.thirdjumbotron}>
 					<Container>
 						<Row>
-							<Col xs={12} md={10}>
+							<Col xs={12} md={10} style={{height:"100%"}}>
 								<h1>What I do</h1>
 								<p style={{marginTop:"4vh",fontWeight:"normal",fontSize:"125%"}}>
 									I create small to large websites for freelance clients as well as mobile apps and desktop applications. I have worked on ecommerce projects for online stores and small local business websites. My main goal in what I do is to see a better world of technology with accessibility for all.
