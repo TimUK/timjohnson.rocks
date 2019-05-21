@@ -10,7 +10,7 @@ class App extends React.Component{
     render() {
         return (
             <>
-                <Navbar style={{backgroundColor:"#20232a"}} variant="dark" expand="lg">
+                <Navbar sticky="top" style={{backgroundColor:"rgba(0, 123, 255, 0.8)"}} variant="dark" expand="lg">
                     <Navbar.Brand href="/">Tim Johnson Portfolio</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

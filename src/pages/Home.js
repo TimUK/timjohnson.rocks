@@ -5,7 +5,16 @@ import Carousel from 'react-bootstrap/Carousel';
 import CarouselImage1 from './images/macbook_and_iphone.png';
 import CarouselImage2 from './images/macbook_and_iphone_percent.png';
 import jumbotronbackground from './images/jumbotronbackground.jpg';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLaptopCode,faBriefcase } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faLaptopCode);
+library.add(faBriefcase);
 
 
 const styles = {
@@ -13,9 +22,10 @@ const styles = {
         fontWeight:"bold",
         fontSize:"250%",
         textAlign:"center",
-        minHeight:"43vh",
+        minHeight:"350px",
         color:"#fff",
-        backgroundColor:"#20232a",
+		//backgroundColor:"#20232a",
+		backgroundColor:"#007bff"
         
     },
     carouseltext:{
@@ -23,17 +33,41 @@ const styles = {
         textShadow: "2px 0px 0px #000, -2px 0px 0px #000,0px 2px 0px #000, 0px -2px 0px #000"
 	},
 	jumbotron:{
+		paddingLeft:"2vw",
 		backgroundColor:"#000",
 		color:"#fff",
 		backgroundRepeat:"no-repeat",
 		backgroundPosition:"center",
 		backgroundSize:"70%",
 		backgroundImage:"url("+jumbotronbackground+")",
-		marginTop:"3vh",
+		marginTop:"0",
 		height:"38vh",
-		width:"98vw",
+		//width:"98vw",
 		marginLeft:"auto",
-		marginRight:"auto"
+		marginRight:"auto",
+		marginBottom:"0"
+	},
+	aboutjumbotron:{
+		backgroundColor:"#fff",
+		color:"#007bff",
+		marginTop:"0",
+		//height:"40vh",
+		minHeight:"50vh",
+		//width:"98vw",
+		marginLeft:"auto",
+		marginRight:"auto",
+		marginBottom:"0"
+	},
+	thirdjumbotron:{
+		backgroundColor:"#007bff",
+		color:"#fff",
+		marginTop:"0",
+		//height:"40vh",
+		minHeight:"50vh",
+		//width:"98vw",
+		marginLeft:"auto",
+		marginRight:"auto",
+		marginBottom:"0"
 	}
 }
 
@@ -50,16 +84,16 @@ class Home extends React.Component{
         return (
             <>
                 
-                <Jumbotron style={styles.jumbotron}>
+                <Jumbotron fluid style={styles.jumbotron}>
                     <h1>Hello!</h1>
                     <p>
-                        I am a software developer based in West Sussex, UK with a keen interest in web and mobile applications development.
+                        I am a software developer based in Bognor Regis, West Sussex, UK with a keen interest in web and mobile applications development.
                     </p>
                     <p>
                         <Button variant="primary" href="https://github.com/TimUK" target="_blank">See my projects</Button>
                     </p>
                 </Jumbotron>
-                <Carousel style={{width:"98vw",marginLeft:"auto",marginRight:"auto"}}>
+                <Carousel style={{marginLeft:"auto",marginRight:"auto"}}>
                 {
                     projects.map((item,index)=>{
                         return(
@@ -78,6 +112,37 @@ class Home extends React.Component{
                 }
                 </Carousel>
                 
+				<Jumbotron fluid style={styles.aboutjumbotron}>
+					<Container>
+						<Row>
+							<Col xs={12} md={2} style={{fontSize:"700%"}}>
+								<FontAwesomeIcon icon="laptop-code"/>
+							</Col>
+							<Col xs={12} md={10}>
+								<h1>More about me</h1>
+								<p style={{marginTop:"4vh",fontWeight:"normal",fontSize:"125%"}}>
+									Currently I am working as a software developer and web design developer in Rustington and Littlehampton with links to Worthing, Brighton, Portsmouth and other locations around the UK. Technologies that I use on a day to day basis include React, JavaScript, HTML, CSS, Delphi, PHP and SQL.
+								</p>
+							</Col>
+						</Row>
+					</Container>
+                </Jumbotron>
+
+				<Jumbotron fluid style={styles.thirdjumbotron}>
+					<Container>
+						<Row>
+							<Col xs={12} md={10}>
+								<h1>What I do</h1>
+								<p style={{marginTop:"4vh",fontWeight:"normal",fontSize:"125%"}}>
+									I create small to large websites for freelance clients as well as mobile apps and desktop applications. I have worked on ecommerce projects for online stores and small local business websites. My main goal in what I do is to see a better world of technology with accessibility for all.
+								</p>
+							</Col>
+							<Col xs={12} md={2} style={{fontSize:"700%"}}>
+								<FontAwesomeIcon icon="briefcase"/>
+							</Col>
+						</Row>
+					</Container>
+                </Jumbotron>
             </>
         );
     }
